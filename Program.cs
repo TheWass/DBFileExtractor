@@ -39,7 +39,7 @@ namespace DBFileExtractor
             Console.Write("Enter output file name: ");
             string fileName = Console.ReadLine();
 
-            string outputFile = Path.Combine(Path.GetTempPath(), fileName);
+            string outputFile = Path.Combine(Environment.CurrentDirectory, fileName);
 
             Console.Write("Text or Binary: ");
             switch (Console.ReadLine().ToLower().Substring(0, 1))
